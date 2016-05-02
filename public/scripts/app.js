@@ -44,13 +44,8 @@ define([
             tabs: [
                 {icon: 'fa-home', state: 'about', label: 'About'},
                 {icon: 'fa-tachometer', state: 'dashboards', label: 'Dashboards'},
-                {icon: 'fa-th', state: 'cards', label: 'Cards', subitems: [
-                    {state: 'interactions', label: 'Interactions'},
-                    {state: 'dataControl', label: 'Data Control'},
-                    {state: 'patients', label: 'Patients'},
-                    {state: 'hospitals', label: 'Hospitals'}
-                ]},
-                {icon: 'fa-bar-chart', state: 'components', label: 'Components'}
+                {icon: 'fa-bar-chart', state: 'analyticsCatalog', label: 'Analytics Catalog'},
+                {icon: 'fa-area-chart', state: 'analyticsRuntime', label: 'Analytics Runtime'}
             ]
         };
 
