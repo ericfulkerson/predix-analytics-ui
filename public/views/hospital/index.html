@@ -1,0 +1,19 @@
+<px-card header-text="Hospitals">
+	<article role="article">
+	    <div class="flex">
+	        <p>There are {{hospitals.length}} hospitals within this network.</p>
+	    </div>
+	</article>
+	</px-card>
+<px-card>
+	<link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
+	<template is="dom-bind" id="hospital-info-element">
+		<iron-ajax
+			auto
+			url="/hospital-details.json"
+			handle-as="json"
+			last-response="{{response}}">
+		</iron-ajax>
+		<hospital-info hospital-details='{{response}}'></hospital-info>
+	</template>
+</px-card>

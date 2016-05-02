@@ -1,0 +1,40 @@
+<px-card>
+    <article role="article">
+        <h2 class="u-mt0 u-pt+">Patients</h2>
+        <div class="flex">
+          <form ng-submit="addPatient()">
+            <ol class="list-bare">
+              <li class="form-field">
+                <label for="first-name">First Name: </label>
+                <input type="text" id="first-name" placeholder="i.e. Joe" ng-model="form.firstName" class="text-input input--small"></input>
+              </li>
+              <li class="form-field">
+                <label for="last-name">Last Name: </label>
+                <input type="text" id="last-name" placeholder="i.e. Smith" ng-model="form.lastName" class="text-input input--small"></input>
+              </li>
+            </ol>
+            <input class="btn btn--primary" type="submit" value="Add Patient" />
+          </form>
+        </div>
+        <br/>
+        <p>Search: <input ng-model="filterText"></p>
+        <div class="flex">
+            <table>
+              <thead>
+                <tr>
+                  <th>Patient ID</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="patient in patients| filter:filterText">
+                  <td>{{patient.id}}</td>
+                  <td>{{patient.firstName}}</td>
+                  <td>{{patient.lastName}}</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    </article>
+</px-card>
