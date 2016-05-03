@@ -39,7 +39,7 @@ define([
             name: 'Predix Seed',
             session: {},
             tabs: [
-                {icon: 'fa-bar-chart', state: 'catalog', label: 'Analytics Catalog'},
+                {icon: 'fa-bar-chart', state: 'analyticsCatalog', label: 'Analytics Catalog'},
                 {icon: 'fa-area-chart', state: 'analyticsRuntime', label: 'Analytics Runtime'}
             ]
         };
