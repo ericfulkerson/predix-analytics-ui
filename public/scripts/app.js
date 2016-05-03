@@ -32,10 +32,7 @@ define([
      * child controllers to access properties defined on the $rootScope.
      */
     predixApp.controller('MainCtrl', ['$scope', '$rootScope', 'PredixUserService', function ($scope, $rootScope, predixUserService) {
-        $rootScope.patients = [
-            {id: 1, firstName: 'Bob', lastName: 'Dylan'},
-            {id: 2, firstName: 'Joe', lastName: 'Sammy'}
-        ];
+        
         //Global application object
         window.App = $rootScope.App = {
             version: '1.0',

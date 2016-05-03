@@ -1,6 +1,6 @@
 {
-  "name": "predix-seed",
-  "version": "1.2.16",
+  "name": "predix-analytics-ui",
+  "version": "0.0.1",
   "private": true,
   "ignore": [
     "**/.*",
@@ -33,6 +33,7 @@
     "px-login": "https://github.com/PredixDev/px-login.git#~v0.1.1",
     "px-sample-cards": "https://github.com/PredixDev/px-sample-cards.git#~v0.2.15",
     "px-theme": "https://github.com/PredixDev/px-theme.git#~v0.6.5",
+    "px-data-table": "https://github.com/PredixDev/px-data-table.git",
     "require-css": "0.1.1",
     "requirejs": "https://github.com/jrburke/requirejs.git#2.1.18",
     "requirejs-plugins": "1.0.2",
