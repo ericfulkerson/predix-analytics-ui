@@ -39,6 +39,11 @@ define(['angular', 'angular-ui-router'], function(angular) {
                 url: '/components',
                 templateUrl: 'view/components.hmtl'
             })
+            .state('catalog', {
+            	url: '/catalog',
+            	templateUrl: 'views/catalog/index.html',
+            	controller: 'CatalogCtrl'
+            })
             .state('patients', {
                 url: '/patients',
                 templateUrl: '/views/patient/index.html',
@@ -54,7 +59,7 @@ define(['angular', 'angular-ui-router'], function(angular) {
         $urlRouterProvider.otherwise(function ($injector) {
             var $state = $injector.get('$state');
             document.querySelector('px-app-nav').markSelected('/dashboards');
-            $state.go('dashboards');
+            $state.go('catalog');
         });
 
     }]);

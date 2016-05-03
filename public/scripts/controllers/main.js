@@ -1,4 +1,4 @@
 
-define(['./patients', './hospitals'], function() {
+define(['./patients', './hospitals', './catalog'], function() {
 
 });

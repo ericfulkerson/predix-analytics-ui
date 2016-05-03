@@ -1,6 +1,6 @@
 ---
 applications:
-  - name: my-seed-app-eric
+  - name: predix-analytics-ui
     buildpack: predix_openresty_buildpack
     path: dist
     memory: 64M
