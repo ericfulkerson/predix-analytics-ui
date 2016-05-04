@@ -1,18 +1,13 @@
 'use strict';
 
 define(['angular', '../modules/sample-module/sample-module'], function(angular, controllers){
-	controllers.controller('CatalogCtrl', ['$scope', function($scope){
-		$scope.catalog = [
-		    {
-		    	id: 1,
-		    	name: "Hello World",
-		    	value: "This is my value"
-		    },
-		    {
-		    	id: 2,
-		    	name: "World Hello",
-		    	value: "This is my other value"
-		    }
-		];
+	controllers.controller('CatalogCtrl', ['$http','$scope', function($http,$scope){
+		$http.get("/api/predix-analytics-catalog-new-ui/catalog/analytics")
+			.then(function(response){
+				$scope.catalog = response.data;
+			},
+			function(failureCallback){
+				system.log(failureCallback)
+			});
 	}]);
 });
