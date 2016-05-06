@@ -7,7 +7,7 @@ define(['angular', '../modules/sample-module/sample-module'], function(angular, 
 				$scope.catalog = response.data;
 			},
 			function(failureCallback){
-				console.log(failureCallback)
+				console.log("You are " + failureCallback.statusText)
 			});
 	}]);
 });
