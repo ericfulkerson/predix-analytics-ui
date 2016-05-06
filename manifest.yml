@@ -6,8 +6,8 @@ applications:
     memory: 64M
     stack: cflinuxfs2
     services:
-            - ui_tutorial_redis # change this to your redis service instance name
-            - ui_tutorial_view # change this to your view service instance name
+            - ui_tutorial_redis
+            - ui_tutorial_view 
             - analytics-catalog-new-ui
             - analytics-runtime-new-ui
     env:

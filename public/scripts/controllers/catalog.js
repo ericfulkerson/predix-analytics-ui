@@ -2,12 +2,12 @@
 
 define(['angular', '../modules/sample-module/sample-module'], function(angular, controllers){
 	controllers.controller('CatalogCtrl', ['$http','$scope', function($http,$scope){
-		$http.get("/api/predix-analytics-catalog-new-ui/catalog/analytics")
+		$http.get("https://predix-analytics-catalog-release.run.aws-usw02-pr.ice.predix.io/api/v1/catalog/analytics")
 			.then(function(response){
 				$scope.catalog = response.data;
 			},
 			function(failureCallback){
-				system.log(failureCallback)
+				console.log(failureCallback)
 			});
 	}]);
 });
