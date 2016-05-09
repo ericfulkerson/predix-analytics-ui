@@ -25,6 +25,10 @@ var config = {
     '/api/view-service(.*)': {
       url: 'https://predix-views.run.aws-usw02-pr.ice.predix.io/v1$1',
       instanceId: '7d2333cb-fdbd-4e24-b6d7-d7f722ff4d63'
+    },
+    '/api/predix-analytics-catalog-new-ui(.*)': {
+      url: 'https://predix-analytics-catalog-release.run.aws-usw02-pr.ice.predix.io',
+      
     }
   }
 };
