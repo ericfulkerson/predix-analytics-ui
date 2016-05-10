@@ -28,7 +28,7 @@ var config = {
     },
     '/api/predix-analytics-catalog-new-ui(.*)': {
       url: 'https://predix-analytics-catalog-release.run.aws-usw02-pr.ice.predix.io',
-      
+      zoneId: '99b12599-a0de-4380-bdf5-84e18c7df788'
     }
   }
 };

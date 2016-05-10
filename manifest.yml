@@ -8,8 +8,8 @@ applications:
     services:
             - ui_tutorial_redis
             - ui_tutorial_view 
-            - analytics-catalog-new-ui
-            - analytics-runtime-new-ui
+            - predix-analytics-catalog-new-ui
+            - predix-analytics-runtime-new-ui
     env:
       UAA_SERVER_URL: https://e885ee26-db31-412c-a624-bb78fe8a5f45.predix-uaa.run.aws-usw02-pr.ice.predix.io # change to your UAA instance url
       REDIS: redis-5
