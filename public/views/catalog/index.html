@@ -1,8 +1,47 @@
 <px-card>
-	<h2 class="u-mt0 u-pt+">Analytics Catalog</h2>
+	<div>
+		<h2 class="u-mt0 u-pt+">Analytics Catalog</h2>
+		<div class="flex flex--right">
+			<button class="btn modal-trigger" onclick="uploadAnalyticModal();">
+	    		<i class="fa fa-upload"></i> Import Analytic
+	    	</button>
+			<button class="btn modal-trigger" onclick="openAddAnalyticModal();">
+	    		<i class="fa fa-plus-circle"></i> New Analytic
+	    	</button>
+	    </div>
+    </div>
+	<px-modal
+		id="import-analytic-modal"
+  		btn-modal-positive="Import"
+  		btn-modal-negative="Cancel"
+  		modal-heading="Import Analytic">
+    	<p> 
+      		<b>Other stuff will go here once I get this looking how I want it to.</b>
+    	</p>
+    	<p>Another paragraph.</p>
+	</px-modal>
+	<px-modal
+		id="analytic-modal"
+  		btn-modal-positive="Add"
+  		btn-modal-negative="Cancel"
+  		modal-heading="Add New Analytic">
+    	<p> 
+      		<b>Other stuff will go here once I get this looking how I want it to.</b>
+    	</p>
+    	<p>Another paragraph.</p>
+	</px-modal>
 	<px-data-table striped table-rows table-data="{{catalog}}">
 		<px-data-table-column name="name"></px-data-table-column>
 		<px-data-table-column name="value"></px-data-table-column>
 		<px-data-table-column name="id" label="ID"></px-data-table-column>
 	</px-data-table>
 </px-card>
+<script>
+	function openAddAnalyticModal(evt){
+		Polymer.dom(document).querySelector("#analytic-modal").modalButtonClicked();
+	}
+	
+	function uploadAnalyticModal(evt){
+		Polymer.dom(document).querySelector("#import-analytic-modal").modalButtonClicked();
+	}
+</script>
