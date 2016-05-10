@@ -1,5 +1,15 @@
 <px-card>
 	<h2 class="u-mt0 u-pt+">Analytics Catalog</h2>
+	<px-modal
+  		btn-modal-positive="Continue"
+  		btn-modal-negative="Back"
+  		modal-heading="Sign-in required">
+    	<button class="btn btn--primary modal-trigger">Open Modal</button>
+    	<p>
+      		<b>Please sign-in to access this part of the application.</b>
+    	</p>
+    	<p>Lorem ipsum</p>
+	</px-modal>
 	<px-data-table striped table-rows table-data="{{catalog}}">
 		<px-data-table-column name="name"></px-data-table-column>
 		<px-data-table-column name="value"></px-data-table-column>
