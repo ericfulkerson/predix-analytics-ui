@@ -2,10 +2,10 @@
 	<div>
 		<h2 class="u-mt0 u-pt+">Analytics Catalog</h2>
 		<div class="flex flex--right">
-			<button class="btn modal-trigger" onclick="uploadAnalyticModal();">
+			<button class="btn modal-trigger" onclick="uploadAnalyticModal()">
 	    		<i class="fa fa-upload"></i> Import Analytic
 	    	</button>
-			<button class="btn modal-trigger" onclick="openAddAnalyticModal();">
+			<button class="btn modal-trigger" onclick="openAddAnalyticModal()">
 	    		<i class="fa fa-plus-circle"></i> New Analytic
 	    	</button>
 	    </div>
@@ -13,7 +13,7 @@
 	<px-data-table striped table-rows table-data="{{catalog}}">
 		<px-data-table-column name="name"></px-data-table-column>
 		<px-data-table-column name="version"></px-data-table-column>
-		<px-data-table-column name="taxomonyLocation" label="Taxomony Location"></px-data-table-column>
+		<px-data-table-column name="taxonomyLocation" label="Taxonomy Location"></px-data-table-column>
 		<px-data-table-column name="author"></px-data-table-column>		
 		<px-data-table-column name="description"></px-data-table-column>
 		<px-data-table-column name="language"></px-data-table-column>
@@ -29,18 +29,18 @@
    	<p>Another paragraph.</p>
 </px-modal>
 <px-modal id="add-analytic-modal"
-		btn-modal-positive="Add"
+		btn-modal-positive="Save"
 		btn-modal-negative="Cancel"
 		modal-heading="Add New Analytic">
-   	<form>
+   	<form id="add-analytic-form" ng-submit="addAnalytic()">
    		<table>
    			<tr>
    				<td>
    					<label>Taxonomy Location</label>
    				</td>
    				<td>
-   					<input type="text" id="taxomony-location"
-   						ng-model="analyticsForm.taxomonyLocation" 
+   					<input type="text" id="taxonomy-location"
+   						ng-model="analyticsForm.taxonomyLocation" 
    						class="text-input input--small"></input>
    				</td>
    			</tr>
@@ -99,10 +99,16 @@
 </px-modal>
 <script>
 	function openAddAnalyticModal(evt){
-		Polymer.dom(document).querySelector("#add-analytic-modal").modalButtonClicked();
+		Polymer.dom(document).querySelector('#add-analytic-modal').modalButtonClicked();
 	}
 	
 	function uploadAnalyticModal(evt){
-		Polymer.dom(document).querySelector("#import-analytic-modal").modalButtonClicked();
+		Polymer.dom(document).querySelector('#import-analytic-modal').modalButtonClicked();
 	}
+	
+	document.getElementById('add-analytic-modal').addEventListener('btnModalPositiveClicked', function() {
+		$('#add-analytic-form').submit(function(e) {
+			e.preventDefault();
+		});
+	});
 </script>
