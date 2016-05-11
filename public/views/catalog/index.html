@@ -25,10 +25,70 @@
   		btn-modal-positive="Add"
   		btn-modal-negative="Cancel"
   		modal-heading="Add New Analytic">
-    	<p> 
-      		<b>Other stuff will go here once I get this looking how I want it to.</b>
-    	</p>
-    	<p>Another paragraph.</p>
+    	<form>
+    		<table>
+    			<tr>
+    				<td>
+    					<label>Taxonomy Location</label>
+    				</td>
+    				<td>
+    					<input type="text" id="taxomony-location" placeholder="i.e. Joe" 
+    						ng-model="analyticsForm.taxomonyLocation" 
+    						class="text-input input--small"></input>
+    				</td>
+    			</tr>
+    			<tr>
+    				<td>
+    					<label>Name</label>
+    				</td>
+    				<td>
+    					<input type="text" id="name" placeholder="i.e. Joe" 
+    						ng-model="analyticsForm.name" 
+    						class="text-input input--small"></input>
+    				</td>
+    			</tr>
+    			<tr>
+    				<td>
+    					<label>Author</label>
+    				</td>
+    				<td>
+    					<input type="text" id="author" placeholder="i.e. Joe" 
+    						ng-model="analyticsForm.author" 
+    						class="text-input input--small"></input>
+    				</td>
+    			</tr>
+    			<tr>
+    				<td>
+    					<label>Description</label>
+    				</td>
+    				<td>
+    					<input type="text" id="description" placeholder="i.e. Joe" 
+    						ng-model="analyticsForm.description" 
+    						class="text-input input--small"></input>
+    				</td>
+    			</tr>
+    			<tr>
+    				<td>
+    					<label>Version</label>
+    				</td>
+    				<td>
+    					<input type="text" id="version" placeholder="i.e. Joe" 
+    						ng-model="analyticsForm.version" 
+    						class="text-input input--small"></input>
+    				</td>
+    			</tr>
+    			<tr>
+    				<td>
+    					<label>Language</label>
+    				</td>
+    				<td>
+    					<input type="text" id="language" placeholder="i.e. Joe" 
+    						ng-model="analyticsForm.language" 
+    						class="text-input input--small"></input>
+    				</td>
+    			</tr>
+    		</table>
+    	</form>
 	</px-modal>
 	<px-data-table striped table-rows table-data="{{catalog}}">
 		<px-data-table-column name="name"></px-data-table-column>
