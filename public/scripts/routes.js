@@ -40,9 +40,9 @@ define(['angular', 'angular-ui-router'], function(angular) {
                 templateUrl: 'view/components.hmtl'
             })
             .state('catalog', {
-            	url: '/catalog',
-            	templateUrl: 'views/catalog/index.html',
-            	controller: 'CatalogCtrl'
+                url: '/catalog',
+                templateUrl: 'views/catalog/index.html',
+                controller: 'CatalogCtrl'
             })
             .state('patients', {
                 url: '/patients',
